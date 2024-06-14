@@ -1,0 +1,28 @@
+name: "weather action"
+description: "waether github action in written in python"
+
+
+inputs:
+  city:
+    description: "The name of the city"
+    required: true
+  api_key:
+    description: "Your OpenWeatherMap API key"
+    required: true
+
+outputs:
+  result:
+    description: failure or success result of the status
+    value: ${{ steps.outcome.outputs.result }}
+
+
+runs: 
+  using: composite
+  steps: 
+    - shell: bash
+      run: | 
+        export PYTHON_PATH=${{ github.action }}:${{ github.action_path }}/vendor
+        python3 -m weather_action \
+          --city="${{ input.city }}" \
+          --api_key="${{ api_key }}"
+
