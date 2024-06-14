@@ -1,0 +1,14 @@
+name: test weather
+
+on:
+  pull_request:
+    types: ["opened", "synchronize", "reopened"]
+
+
+jobs:
+  test-weather:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: omkarkhatavkar/my-own-gha@v1
+        city: London
+        api_key: ${{ secrets.api_key }}
