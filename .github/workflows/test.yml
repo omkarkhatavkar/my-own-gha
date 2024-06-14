@@ -9,7 +9,7 @@ jobs:
   test-weather:
     runs-on: ubuntu-latest
     steps:
-      - uses: omkarkhatavkar/my-own-gha@main
+      - uses: omkarkhatavkar/weather_action@main
         with:
           city: London
           api_key: ${{ secrets.api_key }}
