@@ -23,6 +23,6 @@ runs:
       run: | 
         export PYTHON_PATH=${{ github.action }}:${{ github.action_path }}/vendor
         python3 -m weather_action \
-          --city="${{ input.city }}" \
-          --api_key="${{ api_key }}"
+          --city="${{ inputs.city }}" \
+          --api_key="${{ inputs.api_key }}"
 
