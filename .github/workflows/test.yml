@@ -10,5 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: omkarkhatavkar/my-own-gha@v1
-        city: London
-        api_key: ${{ secrets.api_key }}
+        with:
+          city: London
+          api_key: ${{ secrets.api_key }}
