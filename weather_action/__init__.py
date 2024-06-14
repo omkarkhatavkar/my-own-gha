@@ -1,1 +1,1 @@
-__name__ = "waether_action"
+__name__ = "weather_action"
